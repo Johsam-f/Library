@@ -135,7 +135,8 @@ ul{
 /* book shelf section */
 #book-shelf{
     min-height: 100vh;
-    background: linear-gradient(to bottom, #000, #222, #555, #777, #555, #222, #000);
+    background: url(https://images.pexels.com/photos/442420/books-shelves-architecture-wood-442420.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat center/cover fixed;
+    /* background: linear-gradient(to bottom, #000, #222, #555, #777, #555, #222, #000); */
     padding-top: 120px;
 }
 
@@ -149,9 +150,44 @@ ul{
 
 .grid-item{
     background-color: rgba(111, 88, 5, 0.369);
+    backdrop-filter: blur(20px);
     border-radius: 20px;
-    padding: 10px;
+    padding: 16px;
     height: 300px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: start;
+    font-size: 1.2rem;
+}
+
+.grid-item > p{
+  width: 100%;
+  padding-top: 12px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.grid-item > p > span{
+  text-transform: capitalize;
+}
+
+.grid-item > .btn-container{
+  margin-top: 10px;
+}
+
+.grid-item > .btn-container #edit-book-btn{
+  background-color: green;
+}
+
+.grid-item > .btn-container #remove-book-btn{
+  padding: 10px;
+  font-size: 20px;
+  background-color: red;
+}
+
+.blue{
+  color: var(--hover-color);
 }
 
 /* floating button */
@@ -277,6 +313,7 @@ ul{
 }
 
 .btn:hover{
+  color: var(--hover-color);
   opacity: 0.8;
   scale: 0.97;
 }
