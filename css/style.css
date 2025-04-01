@@ -37,7 +37,8 @@
     backdrop-filter: blur(5px);
     border-radius: 10px;
     padding: 30px;
-    width: 500px;
+    max-width: 500px;
+    width: 90vw;
     height: 460px;
 }
 

@@ -19,6 +19,7 @@ html{
 
 body{
     color: var(--primary-color);
+    position: relative;
 }
 
 /* navigation */
@@ -94,6 +95,7 @@ body{
     text-shadow: 20px 0px 30px var(--hover-color), -20px 0px 30px var(--hover-color);
     text-transform: capitalize;
     text-align: center;
+    pointer-events: none;
   }
 
 /* utilities */
@@ -132,42 +134,199 @@ ul{
 
 /* book shelf section */
 #book-shelf{
-    height: 100vh;
-    background: radial-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url(https://images.pexels.com/photos/31376820/pexels-photo-31376820/free-photo-of-historic-leeds-library-interior-with-bookshelves.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat center/cover;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #000, #222, #555, #777, #555, #222, #000);
+    padding-top: 120px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    padding: 100px 120px 20px;
+    gap: 2rem;
+    grid-auto-flow: row;
+}
+
+.grid-item{
+    background-color: rgba(111, 88, 5, 0.369);
+    border-radius: 20px;
+    padding: 10px;
+    height: 300px;
+}
+
+/* floating button */
+.add-btn{
+    position: fixed;
+    border: none;
+    background-color: #444;
+    padding: 15px;
+    right: 10px;
+    bottom: 10px;
+    color: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.add-btn:hover{
+    color: var(--hover-color);
+    transform: rotate(45deg);
+}
+
+.add-btn:active{
+    transform: rotate(360deg);
+}
+
+/* the pop up add book menu */
+#add-book{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50vh;
+    max-width: 500px;
+    width: 90vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(30px);
+    color: var(--primary-color);
+    border-radius: 10px;
+
+    /* flex properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden{
+  display: none !important;
+}
+
+#add-book h3{
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.input-container{
+  width: 90%;
+  padding-top: 10px;
+  position: relative;
+  height: 50px;
+  /* font-size: 20px; */
+  transition: all 0.2s ease-in-out;
+}
+
+.input-container > .label{
+  position: absolute;
+  left: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+#add-book .input{
+  font-size: 20px;
+  width: 100%;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+#add-book .input:focus + .label,
+#add-book .input:valid + .label
+{
+  color: var(--hover-color);
+  transform: translateY(-20px);
+}
+
+#add-book .input:focus,
+#add-book .input:valid
+{
+  border-color: var(--hover-color);
+}
+
+#add-book .input:invalid{
+  border-color: red;
+}
+
+#add-book input[type="checkbox"]{
+  margin-left: 10px;
+}
+
+.btn-container{
+  width: 90%;
+  justify-content: space-between;
+}
+
+.btn{
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  color: var(--primary-color);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#cancel-btn{
+  background-color: red;
+}
+
+#add-btn{
+  background-color: green;
+}
+
+.btn:hover{
+  opacity: 0.8;
+  scale: 0.97;
+}
+
+.btn:active{
+  scale: 0.8;
+}
+
+
+#cancel-btn:active{
+  scale: 0.5;
 }
 
 @media (max-width:900px) {
-    @media (max-width: 768px) {
-        .logo{
-            display: none;
-        }
-        .navigation {
-          padding: 15px;
-          top: 5px;
-          gap: 15px;
-        }
+  .logo{
+    display: none;
+  }        
+  .navigation {
+    padding: 15px;
+    top: 5px;
+    gap: 15px;
+  }
       
-        .search-container {
-          width: 80%;
-          max-width: none;
-          padding: 4px 8px;
-        }
+  .search-container {
+    width: 80%;
+    max-width: none;
+    padding: 4px 8px;
+  }
       
-        #searchInput {
-          padding: 6px 8px;
-          font-size: 14px;
-        }
+  #searchInput {          
+    padding: 6px 8px;
+    font-size: 14px;
+  }
       
-        .search-container button {
-          padding: 6px;
-          font-size: 16px;
-        }
+  .search-container button {
+    padding: 6px;
+    font-size: 16px;
+  }
       
-        .navigation ul {
-          flex-wrap: nowrap;
-          justify-content: space-between;
-          align-items: center;
-        }
-      }
+  .navigation ul {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #add-book{
+    width: 90vw;
+    height: fit-content;
+    padding: 10px;
+  }
+
 }
 
