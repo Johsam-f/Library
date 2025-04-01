@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Home</title>
+
+    <!-- styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
+    <nav class="navigation flex">
+      <div class="logo">
+        <i class="fas fa-pencil fa-2x"></i>
+        <i class="fas fa-book fa-2x"></i>
+      </div>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search..." />
+        <button onclick="searchFunction()">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <ul class="flex">
+        <li>
+          <a href="#header" class="links"><i class="fas fa-home"></i> </a>
+        </li>
+        <li><a href="#book-shelf" class="links">Book Shelf</a></li>
+        <li>
+          <a href="index.html" class="links"
+            ><i class="fas fa-sign-out-alt"></i>
+          </a>
+        </li>
+        <li><a href="" class="links"></a></li>
+      </ul>
+    </nav>
+    <header id="header">
+      <h2>
+        Welcome to the <br />
+        dope Library
+      </h2>
+    </header>
+    <section></section>
+    <section id="book-shelf"></section>
+  </body>
+</html>

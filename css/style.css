@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Playwrite+IT+Moderna:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sofadi+One&display=swap');
+
+:root{
+    --primary-color: #f4eec4;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+.main-container{
+    height: 100vh;
+    width: 100vw;
+    color: var(--primary-color);
+    display: grid;
+    place-items: center;
+    background: url(https://images.pexels.com/photos/1907784/pexels-photo-1907784.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat center/cover;
+}
+
+/* utilities */
+.flex{
+    display: flex;
+}
+
+.column{
+    flex-direction: column;
+}
+
+/* detailed styles */
+.login-form{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 30px;
+    width: 500px;
+    height: 460px;
+}
+
+.margin-bottom{
+    margin-bottom: 20px;
+}
+
+.login-form > div:first-of-type > :first-child{
+    margin-right: 20px;
+}
+
+.input{
+    background: rgba(255, 255, 220, 0.5);
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.input:focus{
+    outline:none;
+    box-shadow: 0 0 10px 2px #4cafa8;
+}
+
+.btn-container{
+    justify-content: space-between;
+}
+
+.btn{
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #2f5b58;
+    color: var(--primary-color);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #2f5b80;
+}
+
+.btn:active{
+    scale: 0.9;
+}
+a{
+    text-decoration: none;
+}
+span > a[href*=".html"]{
+    color: var(--primary-color);
+    font-size: 17px;
+    font-weight: 900;
+    margin-left: 10px;
+}
+
+span > a[href*=".html"]:hover{
+    text-decoration: underline;
+}
+
+span > a[href*=".html"]:active{
+    scale: 0.9;
+}
+
+.message {
+    color: red;
+    font-size: 17px;
+    margin-top: 20px;
+    font-weight: 700;
+}

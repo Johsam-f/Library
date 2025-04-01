@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Playwrite+IT+Moderna:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sofadi+One&display=swap');
+
+:root{
+    --primary-color: #f4eec4;
+    --hover-color: #1a73e8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    color: var(--primary-color);
+}
+
+/* navigation */
+.navigation{
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(50px);
+    position: fixed;
+
+    width: 90vw;
+    padding: 20px 20px;
+    border-radius: 10px;
+    top: 10px;
+    margin-left: 5vw;
+}
+
+.search-container {
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid var(--primary-color);
+    border-radius: 24px;
+    padding: 4px 12px;
+    transition: all 0.1s ease;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .search-container:hover,
+  .search-container:focus-within {
+    box-shadow: 0 1px 6px rgba(6, 174, 220, 0.677);
+    border-color: rgba(34, 131, 188, 0.781);
+  }
+  
+#searchInput {
+    color: var(--primary-color);
+    flex: 1;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+  }
+  
+  .search-container button {
+    background: transparent;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+    font-size: 18px;
+  }
+  
+  .search-container button:hover {
+    color: #1a73e8;
+  }
+
+  .search-container button:active{
+    scale: 0.8;
+  }
+
+  .navigation ul{
+    display: inline-flex;
+    gap: 20px;
+  }
+
+  /* Header */
+
+  #header{
+    font-size: 28px;
+    text-shadow: 20px 0px 30px var(--hover-color), -20px 0px 30px var(--hover-color);
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+/* utilities */
+.flex{
+    display: flex;
+}
+
+.column{
+    flex-direction: column;
+}
+
+a{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 19px;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+a:hover{
+    color: var(--hover-color);
+}
+
+ul{
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+#header{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+
+    background: url(https://images.pexels.com/photos/442420/books-shelves-architecture-wood-442420.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat center/cover fixed;
+}
+
+/* book shelf section */
+#book-shelf{
+    height: 100vh;
+    background: radial-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url(https://images.pexels.com/photos/31376820/pexels-photo-31376820/free-photo-of-historic-leeds-library-interior-with-bookshelves.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat center/cover;
+}
+
+@media (max-width:900px) {
+    @media (max-width: 768px) {
+        .logo{
+            display: none;
+        }
+        .navigation {
+          padding: 15px;
+          top: 5px;
+          gap: 15px;
+        }
+      
+        .search-container {
+          width: 80%;
+          max-width: none;
+          padding: 4px 8px;
+        }
+      
+        #searchInput {
+          padding: 6px 8px;
+          font-size: 14px;
+        }
+      
+        .search-container button {
+          padding: 6px;
+          font-size: 16px;
+        }
+      
+        .navigation ul {
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+}
+
