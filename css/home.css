@@ -172,15 +172,15 @@ ul{
   text-transform: capitalize;
 }
 
-.grid-item > .btn-container{
+.grid-item .btn-container{
   margin-top: 10px;
 }
 
-.grid-item > .btn-container #edit-book-btn{
+.grid-item > .btn-container .edit-book-btn{
   background-color: green;
 }
 
-.grid-item > .btn-container #remove-book-btn{
+.grid-item > .btn-container .remove-book-btn{
   padding: 10px;
   font-size: 20px;
   background-color: red;
