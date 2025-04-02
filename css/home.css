@@ -398,11 +398,8 @@ ul{
     padding: 10px;
   }
 
-}
-
-@media (max-width:600px) {
   .navigation ul a[href="#book-shelf"] {
     font-size: 0.7rem;
   }
-}
 
+}
