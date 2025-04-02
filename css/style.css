@@ -109,9 +109,3 @@ span > a[href*=".html"]:active{
     margin-top: 20px;
     font-weight: 700;
 }
-
-@media (max-width:900px) {
-    .btn{
-        font-size: 0.7rem;
-    }
-}
