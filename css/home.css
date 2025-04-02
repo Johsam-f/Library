@@ -390,7 +390,6 @@ ul{
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.5rem;
   }
 
   #add-book{
@@ -399,5 +398,11 @@ ul{
     padding: 10px;
   }
 
+}
+
+@media (max-width:600px) {
+  .navigation ul a[href="#book-shelf"] {
+    font-size: 0.7rem;
+  }
 }
 
