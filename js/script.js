@@ -51,9 +51,6 @@ const myLibrary = [
     myLibrary.forEach((book) => {
       container.insertAdjacentHTML('beforeend', create_book(book));
     });
-    
-    // Add event listeners after rendering
-    // setupEventListeners();
   }
 
   document.addEventListener('DOMContentLoaded', put_books_on_shelf);
