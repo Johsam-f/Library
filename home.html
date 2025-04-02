@@ -55,7 +55,7 @@
           <span class="label">Title</span>
         </div>
         <div class="input-container">
-          <input type="number" id="pages" class="input" required />
+          <input type="number" id="pages" class="input" min="1" required />
           <span class="label">Number Of Pages</span>
         </div>
         <div class="input-container">
@@ -63,7 +63,9 @@
           <input type="checkbox" id="read-status" />
         </div>
         <div class="btn-container flex">
-          <button class="btn" id="add-btn" onclick="add_book()">Add</button>
+          <button class="btn" id="add-btn" onclick="addBookToLibrary()">
+            Add
+          </button>
           <button class="btn" id="cancel-btn" onclick="cancel_add_book()">
             Cancel
           </button>

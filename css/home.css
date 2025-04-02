@@ -36,6 +36,8 @@ body{
     border-radius: 10px;
     top: 10px;
     margin-left: 5vw;
+
+    z-index: 3;
 }
 
 .search-container {
@@ -160,6 +162,10 @@ ul{
     justify-content: center;
     align-items: start;
     font-size: 1.2rem;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .grid-item > p{
@@ -200,8 +206,7 @@ ul{
 }
 
 #header > *,
-#book-shlf > *,
-.navigation{
+#book-shlf > *{
   z-index: 1;
 }
 
@@ -283,6 +288,7 @@ ul{
   outline: none;
   border: none;
   border-bottom: 2px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 #add-book .input:focus + .label,
@@ -345,6 +351,16 @@ ul{
 }
 
 @media (max-width:900px) {
+  .grid-container{
+    place-items: center;
+    padding: 0;
+  }
+
+  .grid-item{
+    height: 300px;
+    width: 250px;
+  }
+
   .logo{
     display: none;
   }        
