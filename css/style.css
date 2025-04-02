@@ -14,7 +14,7 @@
 
 .main-container{
     height: 100vh;
-    width: 100vw;
+    min-width: 100vw;
     color: var(--primary-color);
     display: grid;
     place-items: center;
