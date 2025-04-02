@@ -33,8 +33,8 @@ const myLibrary = [
         <p><span class="blue">No of Pages:</span> <span class="page-number">${book.pages}</span></p>
         <p><span class="blue">Status:</span> <span class="status">${book.status}</span></p>
         <div class="btn-container flex">
-          <button class="btn edit-book-btn">Edit</button>
-          <button class="btn remove-book-btn">
+          <button class="btn edit-book-btn" onclick="edit_book()">Edit</button>
+          <button class="btn remove-book-btn" onclick="delete_book()">
             <i class="fas fa-trash"></i>
           </button>
         </div>
