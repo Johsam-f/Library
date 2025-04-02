@@ -368,17 +368,18 @@ ul{
     padding: 15px;
     top: 5px;
     gap: 15px;
+    font-size: 0.8rem;
   }
       
   .search-container {
-    width: 80%;
-    max-width: none;
+    width: 30vw;
     padding: 4px 8px;
   }
       
   #searchInput {          
     padding: 6px 8px;
     font-size: 14px;
+    width: 20%;
   }
       
   .search-container button {
