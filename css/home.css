@@ -368,7 +368,10 @@ ul{
     padding: 15px;
     top: 5px;
     gap: 15px;
-    font-size: 0.8rem;
+  }
+
+  .navigation ul{
+    font-size: 0.7rem;
   }
       
   .search-container {
