@@ -369,10 +369,6 @@ ul{
     top: 5px;
     gap: 15px;
   }
-
-  .navigation ul{
-    font-size: 0.7rem;
-  }
       
   .search-container {
     width: 30vw;
@@ -394,6 +390,7 @@ ul{
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+    font-size: 0.7rem;
   }
 
   #add-book{
