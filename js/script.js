@@ -121,7 +121,7 @@ function cancel_add_book(){
 
     if(hide_status.classList == "hidden"){
       hide_status.classList.remove('hidden');
-      rotate_btn.style.transform = "rotate(-360deg)";
+      rotate_btn.style.transform = "rotate(-315deg)";
     }else{
       hide_status.classList.add('hidden');
       rotate_btn.style.transform = "rotate(360deg)";
