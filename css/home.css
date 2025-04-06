@@ -226,7 +226,6 @@ ul{
 
 .add-btn:hover{
     color: var(--hover-color);
-    transform: rotate(45deg);
 }
 
 /* .add-btn:active{
@@ -356,14 +355,15 @@ ul{
     padding: 0;
   }
 
+  .logo{
+    display: none;
+  } 
+  
   .grid-item{
     height: 300px;
     width: 250px;
   }
 
-  .logo{
-    display: none;
-  }        
   .navigation {
     padding: 15px;
     top: 5px;

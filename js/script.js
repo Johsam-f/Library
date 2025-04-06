@@ -47,6 +47,13 @@ function generate_unique_id(){
   return new_id;
 }
 
+document.getElementById('add-book').addEventListener('submit', function(event) {
+  // Prevent the form from submitting
+  event.preventDefault();
+  
+  addBookToLibrary();
+});
+
 function addBookToLibrary() {
   // take params, create a book then store it in the array
   const author = document.getElementById("author");
